@@ -1,64 +1,223 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>World Cup 2034 Stadiums Gallery</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FIFA World Cup 2034 — Saudi Arabia</title>
   <style>
-    body {
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0b5ed7;
+      --muted:#6b7280;
+      --shadow: 0 6px 18px rgba(16,24,40,0.08);
+      --radius:12px;
+      font-family: "Segoe UI", Tahoma, system-ui, sans-serif;
+    }
+    html,body{height:100%}
+    body{
       margin:0;
-      background:#f5f7fa;
-      font-family: Arial, sans-serif;
-      color:#212121;
+      background:linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+      color:#0f1724;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      padding:28px;
     }
-    h1 { text-align:center; margin-top:24px; }
-    .gallery {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .container{
+      max-width:1000px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       gap:16px;
-      padding:20px;
     }
-    .gallery-item {
-      background:#fff;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      transform: scale(0.95);
-      opacity: 0;
-      animation: appear 0.6s ease-out forwards;
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
     }
-    .gallery-item img {
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
+      font-weight:700;color:var(--accent);
+    }
+    h1{margin:0;font-size:20px}
+    p.lead{margin:0;color:var(--muted)}
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:1fr 320px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .images-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .images-row img{
+      border-radius:10px;
       width:100%;
+      max-width:320px;
+      height:auto;
       display:block;
+      box-shadow:0 8px 20px rgba(16,24,40,0.06);
     }
-    .caption {
-      padding:12px;
-      text-align:center;
+
+    ul.facts{
+      padding-left:0;
+      list-style:none;
+      margin:10px 0 0 0;
+      display:grid;
+      gap:8px;
+    }
+    ul.facts li{
+      background:#f3f6ff;
+      border-radius:10px;
+      padding:10px;
+      color:#0b1724;
+      font-weight:600;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .muted{
+      color:var(--muted);
       font-size:14px;
-      color:#555;
     }
-    @keyframes appear {
-      to {
-        transform: scale(1);
-        opacity:1;
-      }
+
+    .links a{
+      display:inline-block;
+      margin:6px 8px 6px 0;
+      padding:8px 12px;
+      background:#eef6ff;
+      border-radius:8px;
+      text-decoration:none;
+      color:var(--accent);
     }
-    /* hover effect */
-    .gallery-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      margin-top:8px;
+      font-size:13px;
+    }
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .images-row img{max-width:48%}
+    }
+    @media (max-width:520px){
+      .images-row img{max-width:100%}
     }
   </style>
 </head>
 <body>
-  <h1>World Cup 2034 — Saudi Stadiums Gallery</h1>
-  <div class="gallery">
-    <!-- Example item -->
-    <div class="gallery-item">
-      <img src="https://wasmenia.com/_next/image?q=75&url=https%3A%2F%2Fstrapi.wasmenia.com%2Fuploads%2FSaudi_2034_03_a89930c076.svg&w=640" alt="King Salman Stadium 2034">
-      <div class="caption">King Salman Stadium (Riyadh) — main venue</div>
-    </div>
-    <!-- Add more items by copying the above block and updating src & caption -->
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">2034</div>
+        <div>
+          <h1>FIFA World Cup 2034 — Overview</h1>
+          <p class="lead">A summarized look at Saudi Arabia’s hosting of the 2034 World Cup</p>
+        </div>
+      </div>
+      <div class="muted">Compiled from official and media sources</div>
+    </header>
+
+    <main>
+      <div class="grid">
+        <!-- main content -->
+        <section class="card">
+          <div class="section-title">
+            <h2 style="margin:0">Basics — Who’s Hosting? Where?</h2>
+          </div>
+
+          <p class="muted">
+            • Host country: <strong>Saudi Arabia</strong>.<br>
+            • Tournament includes <strong>48 teams</strong> across several cities and stadiums.
+          </p>
+
+          <h3 style="margin-top:14px">Key Details</h3>
+          <ul class="facts">
+            <li>Saudi Arabia won the hosting rights as the only official bid.</li>
+            <li>Expected stadiums: <strong>15</strong> across <strong>5 major cities</strong> (Riyadh, Jeddah, Khobar, Abha, NEOM).</li>
+            <li>King Salman Stadium is expected to host the opening match or the final.</li>
+          </ul>
+
+          <h3 style="margin-top:14px">Hosting Objectives</h3>
+          <p class="muted">
+            Strengthening sports and tourism infrastructure, aligned with Saudi Vision 2030 to become a global destination.
+          </p>
+
+          <h3 style="margin-top:14px">Controversies & Challenges</h3>
+          <ul class="facts" style="background:#fff6f6;">
+            <li>Human rights and labor concerns raised by some international organizations.</li>
+            <li>Summer climate may require adjusting the traditional World Cup schedule.</li>
+          </ul>
+        </section>
+
+        <!-- right column -->
+        <aside class="card">
+          <div class="section-title">
+            <h3 style="margin:0">Images & Expected Designs</h3>
+          </div>
+
+          <div class="images-row">
+            <img src="https://wasmenia.com/_next/image?q=75&url=https%3A%2F%2Fstrapi.wasmenia.com%2Fuploads%2FSaudi_2034_03_a89930c076.svg&w=640" alt="Saudi 2034 Logo Concept" />
+            <img src="https://ar.big5constructsaudi.com/wp-content/uploads/sites/11/2024/12/FIFA_stadiumMap_SaudiArabia.png" alt="Saudi Arabia 2034 Stadium Map" />
+            <img src="https://cdn.rt.emap.com/wp-content/uploads/sites/4/2024/07/29161401/King-Salman-Stadium-Render-4-1600x900.jpg" alt="King Salman Stadium Rendering" />
+          </div>
+
+          <p class="muted" style="margin-top:12px">Image sources: news and official reports.</p>
+        </aside>
+      </div>
+
+      <!-- additional sections -->
+      <section class="card" style="margin-top:18px">
+        <div class="section-title">
+          <h2 style="margin:0">Useful Sources</h2>
+        </div>
+
+        <p class="muted">External reading links (open in a new tab):</p>
+        <div class="links">
+          <a href="https://www.sportsbusinessjournal.com/Articles/2024/12/11/2034-fifa-world-cup-saudi-arabia-naming/?utm_source=chatgpt.com" target="_blank">Sports Business Journal Report</a>
+          <a href="https://english.alarabiya.net/News/saudi-arabia/2025/01/31/saudi-arabia-s-sports-minister-vows-world-class-2034-world-cup-talks-key-issues?utm_source=chatgpt.com" target="_blank">Saudi Sports Minister Statement</a>
+          <a href="https://timesofindia.indiatimes.com/world/middle-east/saudi-arabias-stadium-in-the-sky-for-2034-fifa-world-cup-separating-fact-from-fiction/articleshow/124930769.cms?utm_source=chatgpt.com" target="_blank">Times of India — NEOM Stadium</a>
+          <a href="https://www.consultancy-me.com/news/9980/the-impacts-of-the-2034-fifa-world-cup-to-saudi-arabias-economy?utm_source=chatgpt.com" target="_blank">Economic Impact Study</a>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:18px">
+        <div class="section-title">
+          <h2 style="margin:0">Note</h2>
+        </div>
+        <p class="muted">
+          This page summarizes verified information based on official announcements and major media outlets.  
+          If you want this turned into a PDF, PowerPoint, or a darker UI version — just tell me.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Compiled from official reports and media sources (Al Jazeera, SBJ, Saudi government announcements).  
+    </footer>
   </div>
 </body>
 </html>
